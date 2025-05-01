@@ -44,17 +44,17 @@ function App() {
             </TabButton>
           </menu>
           <div id="tab-content">
-            {!selectedTopic ? 
-            (<p>Please select a topic.</p>) : (
+            {!selectedTopic && <p>Please select a topic.</p>}
+            {selectedTopic && (
               <>
-                <h3>{EXAMPLES[selectedTopic].title}</h3>
+              <h3>{EXAMPLES[selectedTopic].title}</h3>
                 <p>{EXAMPLES[selectedTopic].description}</p>
                 <pre>
                   <code>
                     {EXAMPLES[selectedTopic].code}
                   </code>
                 </pre>
-                </>
+              </> 
             )}
           </div>
         </section>
