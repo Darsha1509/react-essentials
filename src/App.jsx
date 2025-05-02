@@ -20,10 +20,10 @@ function App() {
         <section id="core-concepts">
           <h2>Core Concepts</h2>
           <ul>
-            {CORE_CONCEPTS.map((item, index) => {
+            {CORE_CONCEPTS.map(item => {
               return (<CoreConcept 
                 {...item}
-                key = {index} />);
+                key = {item.title} />);
             })}
           </ul>
         </section>
