@@ -36,7 +36,9 @@ export function Examples() {
 
     return (
         <Section id="examples" title="Examples">
-          <Tabs buttons={
+          <Tabs
+            ButtonsContainer="menu"
+            buttons={
             <>
               <TabButton
               onClick={() => handleSelect('components')}
